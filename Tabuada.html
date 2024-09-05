@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: bisque;
+        }
+
+        h1 {
+            text-align: center;
+            text-decoration: underline;
+        }
+
+        input, button {
+            padding: 10px;
+            font-size: 16px;
+        }
+        #resultado {
+            margin-top: 20px;
+        }
+
+        .n1 {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>TABUADA</h1>
+    <br>
+    <label class="n1" for="numero">Informe um número:</label>
+    <input type="number" id="numero" min="1">
+    <button onclick="gerarTabuada()">Gerar Tabuada</button>
+
+    <div id="resultado"></div>
+
+    <script>
+        function gerarTabuada() {
+            const numero = document.getElementById('numero').value;
+            let resultado = '';
+
+            // Laço para gerar a tabuada de 1 a 10
+            for (let i = 1; i <= 10; i++) {
+                resultado += `${numero} x ${i} = ${numero * i}<br>`;
+            }
+
+            document.getElementById('resultado').innerHTML = resultado;
+        }
+    </script>
+
+</body>
+</html>
